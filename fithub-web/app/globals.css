@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ff9d00;
+  --color-obsidian: #080808;
+  --color-neon-orange: #ff9d00;
+  --color-neon-gold: #ffd700;
+  --color-neon-purple: #bc13fe;
+  --color-neon-cyan: #00ffff;
+  --color-neon-green: #39ff14;
+  --color-neon-coral: #ff7f50;
+
+  --color-background-light: #f8f7f5;
+  --color-background-dark: #231b0f;
+  
+  --font-display: 'Manrope', 'Noto Sans', sans-serif;
+  
+  --radius-DEFAULT: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Dark mode specific neon borders */
+  .dark .neon-border-orange {
+    border: 1px solid rgba(255, 157, 0, 0.8);
+    box-shadow: 0 0 15px rgba(255, 157, 0, 0.5), inset 0 0 5px rgba(255, 157, 0, 0.2);
+  }
+  .dark .neon-border-gold {
+    border: 1px solid rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5), inset 0 0 5px rgba(255, 215, 0, 0.2);
+  }
+  .dark .neon-border-purple {
+    border: 1px solid rgba(188, 19, 254, 0.8);
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.5), inset 0 0 5px rgba(188, 19, 254, 0.2);
+  }
+  .dark .neon-border-cyan {
+    border: 1px solid rgba(0, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), inset 0 0 5px rgba(0, 255, 255, 0.2);
+  }
+  .dark .neon-border-green {
+    border: 1px solid rgba(57, 255, 20, 0.8);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.5), inset 0 0 5px rgba(57, 255, 20, 0.2);
+  }
+  .dark .neon-border-coral {
+    border: 1px solid rgba(255, 127, 80, 0.8);
+    box-shadow: 0 0 15px rgba(255, 127, 80, 0.5), inset 0 0 5px rgba(255, 127, 80, 0.2);
+  }
+  .dark .neon-border-white {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  .dark .nav-glow {
+    border-top: 2px solid #ff9d00;
+    box-shadow: 0 -4px 15px rgba(255, 157, 0, 0.4);
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+body {
+  font-family: 'Manrope', 'Noto Sans', sans-serif;
+  min-height: max(884px, 100dvh);
+}
